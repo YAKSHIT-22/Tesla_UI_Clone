@@ -486,9 +486,6 @@ video {
 .bottom-3 {
   bottom: 0.75rem;
 }
-.bottom-1 {
-  bottom: 0.25rem;
-}
 .m-auto {
   margin: auto;
 }
@@ -499,14 +496,14 @@ video {
 .ml-0 {
   margin-left: 0px;
 }
+.mr-1 {
+  margin-right: 0.25rem;
+}
 .mt-1 {
   margin-top: 0.25rem;
 }
 .mb-2 {
   margin-bottom: 0.5rem;
-}
-.mr-1 {
-  margin-right: 0.25rem;
 }
 .flex {
   display: flex;
@@ -559,6 +556,18 @@ video {
 }
 .cursor-pointer {
   cursor: pointer;
+}
+.snap-y {
+  scroll-snap-type: y var(--tw-scroll-snap-strictness);
+}
+.snap-mandatory {
+  --tw-scroll-snap-strictness: mandatory;
+}
+.snap-end {
+  scroll-snap-align: end;
+}
+.snap-center {
+  scroll-snap-align: center;
 }
 .flex-row {
   flex-direction: row;
@@ -625,14 +634,11 @@ video {
 .p-3 {
   padding: 0.75rem;
 }
-.p-2 {
-  padding: 0.5rem;
-}
 .p-1 {
   padding: 0.25rem;
 }
-.p-4 {
-  padding: 1rem;
+.p-2 {
+  padding: 0.5rem;
 }
 .px-3 {
   padding-left: 0.75rem;
@@ -704,20 +710,12 @@ html::-webkit-scrollbar{
 *{
     font-family: "Gotham Book",system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-
-.hover\:rounded-full:hover {
-  border-radius: 9999px;
+html{
+    scroll-behavior: smooth;
 }
-
-.hover\:bg-slate-200:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(226 232 240 / var(--tw-bg-opacity));
-}
-
 .hover\:decoration-2:hover {
   text-decoration-thickness: 2px;
 }
-
 @media (min-width: 390px) {
 
   .xs\:ml-3 {
@@ -726,10 +724,6 @@ html::-webkit-scrollbar{
 
   .xs\:mr-2 {
     margin-right: 0.5rem;
-  }
-
-  .xs\:mr-0 {
-    margin-right: 0px;
   }
 
   .xs\:w-32 {
@@ -750,7 +744,6 @@ html::-webkit-scrollbar{
     line-height: 1.25rem;
   }
 }
-
 @media (min-width: 640px) {
 
   .sm\:w-96 {
@@ -761,34 +754,20 @@ html::-webkit-scrollbar{
     cursor: pointer;
   }
 
-  .sm\:flex-row {
-    flex-direction: row;
-  }
-
   .sm\:p-3 {
     padding: 0.75rem;
   }
 }
-
 @media (min-width: 768px) {
 
   .md\:ml-6 {
     margin-left: 1.5rem;
   }
 
-  .md\:cursor-pointer {
-    cursor: pointer;
-  }
-
   .md\:flex-row {
     flex-direction: row;
   }
-
-  .md\:p-3 {
-    padding: 0.75rem;
-  }
 }
-
 @media (min-width: 1024px) {
 
   .lg\:mt-0 {
@@ -803,4 +782,3 @@ html::-webkit-scrollbar{
     flex-direction: row;
   }
 }
-
